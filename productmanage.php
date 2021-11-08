@@ -24,7 +24,7 @@ function deleteConfirm() {
         {
             if(isset($_GET["id"])){
                 $id = $_GET["id"];
-                $sq = "SELECT image from public.product WHERE product_id='$id'";
+                $sq = "SELECT image from product WHERE product_id='$id'";
                 $res = pg_query($conn,$sq);
                 $row = pg_fetch_array($res,pgsql_assoc);
                 $filePic = $row['image'];
